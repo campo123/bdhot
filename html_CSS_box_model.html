@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>html之盒模型</title>
+    <!--盒模型又称框模型（Box Model）,包含了:
+    内容content、内边距padding、
+    边框border、外边距margin几个要素-->
+    <style>
+        .box{
+            height:200px;
+            width:600px ;
+            border: 5px solid red;
+        }
+        .box1{
+            /*border会该表原有盒子的大小*/
+            height:196px;
+            width:196px ;
+            background-color: yellow;
+            border: 2px double blue;
+            float: left;
+        }
+        .box2{
+            height:100%;
+            width:400px ;
+            background-color: pink;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+    <div class="box">
+        <div class="box1">逻辑教育1</div>
+        <div class="box2">逻辑教育2</div>
+        <div class="box3">逻辑教育3</div>
+    </div>
+</html>
