@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>这是我的第一个vue代码</title>
+</head>
+<body>
+    <div id = app>
+        <p>username:{{username}}</p>
+        <p>password:{{password}}</p>
+        <!-- 带参数的method -->
+        <p>{{demo1(username)}}</p>
+
+        <!-- 不带参数的method -->
+        <!-- <button @click = "demo2">按钮</button> -->
+        <p v-html="code">{{code}}</p>
+        <!-- <div v-html="code">{{code}}</div> -->
+        <div>
+            <!-- 属性绑定是不需要{{}}来包裹的，绑定文本才需要花括号 -->
+            <img v-bind:src="imagesrc" alt="百度图片">
+        </div>
+         
+    </div>
+</body>
+</html>
+<!-- 引入外部地址 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- // 引入本地地址 -->
+<script src="G://vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            username : "逻辑教育",
+            password : 123,
+            code : "<a href='https://www.baidu.com/' target = _blank>百度一下</a>",
+            imagesrc : "https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1-2885cdb57f.png"
+            // imagesrc : "./000000080615.jpg"
+        },
+        methods:{
+            // 带参数
+             demo1: function(name){
+                return "晚上好，" + name
+            } 
+
+            // 不带参数
+            // demo2: function(){
+            //     // 将逻辑教育 改成 logic edu
+            //     // this.username = "logic edu"
+
+            //     // 弹出对话框
+            //     alert("clicked me")
+            // }
+
+        }
+    })
+</script>
